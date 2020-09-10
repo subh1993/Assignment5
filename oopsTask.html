@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><h1>OOPS Task</h1><head>
+<body>
+<h3>Class 0: Write a calculator</h3>
+</br>
+<script>
+class calc
+{
+	add = (a,b) => {return a+b}
+	sub =(a,b) => {return a-b}
+	mul = (a,b) => {return a*b}
+
+}
+
+let c = new calc
+console.log(c.add(1,2))
+console.log(c.sub(1,2))
+console.log(c.mul(1,2))
+</script>
+<h3>Class 1: Movie-Basics</h3></br>
+<script>
+	class Movie {
+	constructor(title, studio, rating="PG") {
+		this.title = title;
+		this.studio = studio;
+		this.rating = rating}
+		getPG = (arr) => {return arr.filter((Movies)=>(Movies.rating === "PG"))}
+		
+		
+		
+	}
+	var mov1 = new Movie("Xmen","GRS")
+	var mov2 = new Movie("Avengers","GRS")
+	var mov3 = new Movie("Saw","GRS","DG")
+	var arrMov = [mov1,mov2,mov3]
+	console.log(arrMov)
+	console.log(mov1.getPG(arrMov))
+	var mov4 = new Movie("Casino Royale","Eon productions","PG13")
+	console.log(mov4)
+</script>
+
+
+

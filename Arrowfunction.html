@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head><h1>Arrow function</h1><head>
+<body>
+<script src ="arrowFunction.js"></script>
+<h2>Do the below programs in arrow functions</h2>
+<p><h3>Print odd numbers in an array </h3></br>
+Enter the elements of array <input type="text" placeholder="Enter the Elements of array" id="arrElements">
+    <button type="button" onclick="a();">OUTPUT</button></br>
+	</br>OUTPUT:<input  type = "text"
+    id = "txtOutput"  />
+	<script>
+	 a = (n)=>{
+		var data = document.getElementById("arrElements").value.split(" ")
+		var txtOutput = document.getElementById("txtOutput");
+		var res =""
+		for(num in data)
+		{
+		  if(parseInt(data[num])%2!==0)
+		  {
+		    res+=data[num]+" "
+		  }
+		}
+		txtOutput.value = res
+		}
+	</script>
+    </br>
+</br><h3>Convert all the strings to title caps in a string array</h3></br>
+Enter the elements of array <input type="text" placeholder="Enter the String" id="strElements">
+    <button type="button" onclick="a();">OUTPUT</button></br>
+	</br>OUTPUT:<input type = "text"
+    id = "txtOutput1" />
+	<script>
+	 a = (n)=>{
+		var data = document.getElementById("strElements").value
+		var txtOutput = document.getElementById("txtOutput1");
+		
+		txtOutput.value = data.toUpperCase()
+		}
+	</script></br>
+<h3>Sum of all numbers in an array</h3></br>
+Enter the elements of array <input type="text" placeholder="Enter the Elements to Sum" id="arrElements1">
+    <button type="button" onclick="a();">OUTPUT</button></br>
+	</br>OUTPUT:<input  type = "text"
+    id = "txtOutput2"  />
+	<script>
+	 a = (n)=>{
+		var data = document.getElementById("arrElements1").value.split(" ")
+		var txtOutput = document.getElementById("txtOutput2");
+		var res =0
+		for(num in data)
+		{
+		  
+		    res+=parseInt(data[num])
+		  
+		}
+		txtOutput.value = res
+		}
+	</script>
+    </br>
+	</br>
+<h3>Return all the prime numbers in an array</h3></br>
+Enter the elements of array <input type="text" placeholder="Enter the Elements to Sum" id="arrElements2">
+    <button type="button" onclick="a();">OUTPUT</button></br>
+	</br>OUTPUT:<input  type = "text"
+    id = "txtOutput3"  />
+	<script>
+	  a = (n)=>{
+		var data = document.getElementById("arrElements2").value.split(" ")
+		var txtOutput = document.getElementById("txtOutput3");
+		var res =""
+		for(var num=0;num<data.length;num++) 
+		{
+		var count = 0
+		  for(var j=2;j<=parseInt(data[num])/2+1;j++)
+		  {
+			
+			
+			if(parseInt(data[num])%j==0)
+			{
+			
+				count= count+1;
+			}
+		  }
+		  
+		  if(count===0)
+		  {
+		  res+=data[num]+" "
+		  }
+		}
+		txtOutput.value = res
+		}
+	</script>
+    </br>
+	</br>
+<h3>Return all the palindromes in an array </h3></p>
+Enter the elements of array <input type="text" placeholder="Enter the array of  numbers to check" id="arrElements3">
+    <button type="button" onclick="a();">OUTPUT</button></br>
+	</br>OUTPUT:<input  type = "text"
+    id = "txtOutput4"  />
+	<script>
+	  a = (n)=>{
+		var data = document.getElementById("arrElements3").value.split(" ")
+		var txtOutput = document.getElementById("txtOutput4");
+		var res =""
+		for(var num=0;num<data.length;num++) 
+		{
+		var n = 0
+		var s = 0
+		var temp = parseInt(data[num])
+			
+		  while(temp!==0)
+		  {
+			n= parseInt(temp%10)
+			s=s*10+n
+			temp = parseInt(temp/10)
+			
+			
+		  }
+		
+		  
+		  if(s===parseInt(data[num]))
+		  {
+		  res+=data[num]+" "
+		  }
+		}
+		txtOutput.value = res
+		}
+	</script>
+    </br>
+	</br>
+
+</body>
